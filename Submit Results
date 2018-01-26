@@ -1,0 +1,33 @@
+Failed Test: 7. Test functionality of AlphaBetaPlayer.alphabeta()
+----------------------------------------------------------------------
+AssertionError: False is not true : Your AlphaBetaAgent.alphabeta function did not call the heuristic evaluation function in all of the expected set of leaf nodes configurations in the game tree as player 1. Make sure that you are using the self.score() method to evaluate the board (not calling one of your heuristic functions directly) and verify your stopping conditions. Leaf nodes are shown as (player_1, player_2) location pairs. Optional nodes may or may not be visited depending on your termination test.
+
+Expected leaf nodes:
+{((2, 3), (7, 6)), ((3, 6), (7, 6)), ((0, 7), (7, 6)), ((2, 7), (7, 6))}
+Optional leaf nodes:
+set()
+Leaf nodes your agent evaluated:
+{((2, 7), (6, 4)), ((0, 7), (8, 4)), ((0, 7), (6, 8)), ((0, 7), (5, 5)), ((0, 7), (8, 8)), ((2, 3), (8, 4)), ((2, 7), (8, 8)), ((2, 3), (6, 4)), ((3, 6), (5, 5)), ((3, 6), (6, 8)), ((3, 6), (8, 8)), ((0, 7), (6, 4)), ((2, 7), (5, 5)), ((2, 3), (6, 8)), ((2, 3), (8, 8)), ((2, 7), (6, 8)), ((2, 3), (5, 5)), ((2, 7), (8, 4)), ((3, 6), (6, 4)), ((3, 6), (8, 4))}
+Skipped nodes:
+{((2, 3), (7, 6)), ((3, 6), (7, 6)), ((0, 7), (7, 6)), ((2, 7), (7, 6))}
+Extra nodes:
+{((2, 7), (6, 4)), ((0, 7), (8, 4)), ((0, 7), (6, 8)), ((0, 7), (5, 5)), ((2, 3), (6, 4)), ((3, 6), (8, 8)), ((2, 7), (5, 5)), ((2, 7), (6, 8)), ((2, 3), (5, 5)), ((3, 6), (6, 4)), ((3, 6), (8, 4)), ((0, 7), (8, 8)), ((2, 3), (8, 4)), ((2, 7), (8, 8)), ((3, 6), (5, 5)), ((3, 6), (6, 8)), ((0, 7), (6, 4)), ((2, 3), (8, 8)), ((2, 7), (8, 4)), ((2, 3), (6, 8))}
+
+Test Case Details:
+------------------
+Heuristic: center_distance
+Depth limit: 1
+Initial Board State:
+     0   1   2   3   4   5   6   7   8
+0  |   |   |   | - |   |   |   |   |   |
+1  |   |   |   |   |   | 1 |   |   |   |
+2  |   |   | - |   |   |   | - |   |   |
+3  |   |   | - | - | - | - |   |   |   |
+4  |   |   |   | - | - | - | - |   |   |
+5  |   |   | - |   | - |   |   | - |   |
+6  |   |   | - |   |   | - | - |   |   |
+7  |   |   |   |   | - |   | 2 |   |   |
+8  |   |   |   |   |   |   |   |   |   |
+
+game._board_state:
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 61, 46]
